@@ -3,7 +3,7 @@ import LayoutEffect from "../wrappers/LayoutEffect";
 
 function Hero() {
   return (
-    <section className="bg-gray-800 h-[80vh]">
+    <section className="bg-gray-800 h-[80vh] dark:bg-white dark:text-gray-800">
       <div className="custom-screen py-28">
         <LayoutEffect
           className="duration-1000 delay-300"
@@ -15,7 +15,7 @@ function Hero() {
           <div>
             <div className="space-y-5 max-w-3xl mx-auto text-center">
               <h1
-                className="text-4xl bg-clip-text text-transparent bg-gradient-to-r font-extrabold mx-auto sm:text-6xl"
+                className="text-4xl bg-clip-text text-transparent dark:text-gray-800 bg-gradient-to-r font-extrabold mx-auto sm:text-6xl"
                 style={{
                   backgroundImage:
                     "linear-gradient(179.1deg, #FFFFFF 0.77%, rgba(255, 255, 255, 0) 182.09%)",
@@ -23,7 +23,7 @@ function Hero() {
               >
                 Elevate your projects with ease and style
               </h1>
-              <p className="max-w-xl mx-auto text-gray-300">
+              <p className="max-w-xl mx-auto text-gray-300 dark:text-gray-700">
                 Get access to a vast collection of free, high-quality components
                 and templates that you can seamlessly copy and paste into your
                 projects
@@ -31,7 +31,7 @@ function Hero() {
               <div className="flex justify-center font-medium text-sm ">
                 <a
                   href="/#pricing"
-                  className="flex items-center p-3 rounded-md text-white bg-purple-600 hover:bg-purple-500 active:bg-purple-700 "
+                  className="flex items-center p-3 rounded-md text-white  bg-purple-600 hover:bg-purple-500 active:bg-purple-700 "
                 >
                   Get Started
                   <svg

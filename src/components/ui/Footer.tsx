@@ -2,9 +2,9 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className=" border-t border-gray-600 bg-gray-800">
+    <div className=" border-t dark:border-gray-300 border-gray-600  bg-gray-800 dark:bg-white dark:text-gray-800">
       <div className="max-w-2xl mx-auto text-white py-10">
-        <div className=" flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
+        <div className=" flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400 dark:text-gray-800">
           <p className="order-2 md:order-1 mt-8 md:mt-0">
             {" "}
             Built by Shiwangi Kumari &copy; 2024.{" "}
