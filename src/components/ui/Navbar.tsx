@@ -14,7 +14,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Components", href: "#", current: false },
+  { name: "Components", href: "/allcomponents", current: false },
   { name: "Templates", href: "#", current: false },
 ];
 

@@ -3,7 +3,7 @@ import LayoutEffect from "../wrappers/LayoutEffect";
 
 function Hero() {
   return (
-    <section className="bg-gray-800 h-screen">
+    <section className="bg-gray-800 h-[80vh]">
       <div className="custom-screen py-28">
         <LayoutEffect
           className="duration-1000 delay-300"
