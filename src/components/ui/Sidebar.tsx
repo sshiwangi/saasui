@@ -8,19 +8,19 @@ interface CustomCSSProperties extends CSSProperties {
 function Sidebar() {
   const customStyle: CustomCSSProperties = {
     position: "relative",
-    "--radix-scroll-area-corner-width": "0px",
-    "--radix-scroll-area-corner-height": "0px",
+    // "--radix-scroll-area-corner-width": "0px",
+    // "--radix-scroll-area-corner-height": "0px",
   };
   return (
     <aside className="fixed border-r text-white border-gray-500 top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] px-8 py-4 shrink-0 lg:sticky lg:block lg:self-start">
       <div
-        className="relative overflow-hidden h-full py-6 pr-6 lg:py-8"
-        style={customStyle}
+        className="relative overflow-hidden bg-gray-800 h-full py-6 pr-6 lg:py-8"
+        // style={customStyle}
       >
         <div
-          data-radix-scroll-area-viewport=""
+          // data-radix-scroll-area-viewport=""
           className="h-full w-full rounded-[inherit]"
-          style={{ overflow: "hidden scroll" }}
+          // style={{ overflow: "hidden scroll" }}
         >
           <div style={{ minWidth: "100%", display: "table" }}>
             <div className="w-full">
