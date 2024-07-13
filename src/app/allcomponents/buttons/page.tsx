@@ -1,28 +1,122 @@
 "use client";
 import React from "react";
 import CodeViewer from "@/components/ui/CodeViewer";
-import Image from "next/image";
+import { Button } from "./button";
 
-const code = `
+const codePrimary = `
 import React from 'react';
+import { Button } from './Button';
 
-export function Button() {
+function App() {
   return (
-     <button className="text-white rounded-md p-4 bg-blue-600">Click Me!</button>
+    <Button variant="primary">Primary Button</Button>
   );
 }
 `;
 
-const preview = (
-  <div className="bg-gray-200 flex justify-center items-center rounded-lg  p-4 ">
-    <button className="text-white rounded-md p-4 bg-blue-600">Click Me!</button>
-  </div>
-);
+const codeSecondary = `
+import React from 'react';
+import { Button } from './Button';
+
+function App() {
+  return (
+    <Button variant="secondary">Secondary Button</Button>
+  );
+}
+`;
+
+const codeRounded = `
+import React from 'react';
+import { Button } from './Button';
+
+function App() {
+  return (
+    <Button variant="rounded">Rounded Button</Button>
+  );
+}
+`;
+
+const codeBorder = `
+import React from 'react';
+import { Button } from './Button';
+
+function App() {
+  return (
+    <Button variant="border">Border Button</Button>
+  );
+}
+`;
+
+const codeDisabled = `
+import React from 'react';
+import { Button } from './Button';
+
+function App() {
+  return (
+    <Button variant="disabled">Disabled Button</Button>
+  );
+}
+`;
+
+const codeThreeD = `
+import React from 'react';
+import { Button } from './Button';
+
+function App() {
+  return (
+    <Button variant="threeD">3D Button</Button>
+  );
+}
+`;
+
+const codeWithIcon = `
+import React from 'react';
+import { Button } from './Button';
+
+function App() {
+  return (
+    <Button variant="withIcon">
+      <span className="material-icons mr-2">star</span> Button with Icon
+    </Button>
+  );
+}
+`;
 
 function Buttons() {
   return (
-    <div className="w-3/4 p-4">
-      <CodeViewer code={code} preview={preview} />
+    <div className="w-3/4 p-4 space-y-4">
+      <CodeViewer
+        code={codePrimary}
+        preview={<Button variant="primary">Primary Button</Button>}
+      />
+      <CodeViewer
+        code={codeSecondary}
+        preview={<Button variant="secondary">Secondary Button</Button>}
+      />
+      <CodeViewer
+        code={codeRounded}
+        preview={<Button variant="rounded">Rounded Button</Button>}
+      />
+      <CodeViewer
+        code={codeBorder}
+        preview={<Button variant="border">Border Button</Button>}
+      />
+      <CodeViewer
+        code={codeDisabled}
+        preview={<Button variant="disabled">Disabled Button</Button>}
+      />
+      <CodeViewer
+        code={codeThreeD}
+        preview={<Button variant="threeD">3D Button</Button>}
+      />
+      <CodeViewer
+        code={codeWithIcon}
+        preview={
+          <Button variant="withIcon">
+            <span className="material-icons mr-2">star</span> Button with Icon
+          </Button>
+        }
+      />
     </div>
   );
 }

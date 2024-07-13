@@ -30,7 +30,7 @@ function Hero() {
               </p>
               <div className="flex justify-center font-medium text-sm ">
                 <a
-                  href="/#pricing"
+                  href="/allcomponents"
                   className="flex items-center p-3 rounded-md text-white  bg-purple-600 hover:bg-purple-500 active:bg-purple-700 "
                 >
                   Get Started

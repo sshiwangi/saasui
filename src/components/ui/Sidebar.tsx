@@ -30,7 +30,7 @@ function Sidebar() {
                 </h4>
                 <div className="grid grid-flow-row auto-rows-max text-sm">
                   <a
-                    className="group flex w-full items-center rounded-md text-gray-300 border border-transparent px-2 py-1 hover:text-emerald-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    className="group flex w-full items-center rounded-md text-gray-300 border border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
                     href="#"
                   >
                     Install Tailwind Css
@@ -45,13 +45,25 @@ function Sidebar() {
                 </h4>
                 <div className="grid grid-flow-row auto-rows-max text-sm">
                   <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-emerald-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
                     href="/allcomponents/buttons"
                   >
                     Buttons
                   </a>
                   <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-emerald-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    href="/allcomponents/cards"
+                  >
+                    Cards
+                  </a>
+                  <a
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    href="/allcomponents/accordians"
+                  >
+                    Accordians
+                  </a>
+                  <a
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
                     href="/allcomponents/navbars"
                   >
                     Navbars

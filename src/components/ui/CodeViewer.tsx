@@ -25,22 +25,24 @@ const CodeViewer = ({
 
   return (
     <div className="border border-gray-700 rounded-lg overflow-hidden mb-4">
-      <div className="flex justify-end p-2 bg-gray-900 border-b border-gray-300">
+      <div className="flex justify-start gap-4 p-2 bg-gray-900 border-b border-gray-300">
         <button
           onClick={togglePreview}
-          className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
+          className="px-3 py-1 bg-gray-600 text-white rounded hover:opacity-95"
         >
           {isPreview ? "View Code" : "Preview"}
         </button>
         <CopyToClipboard text={code} onCopy={handleCopy}>
-          <button className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600">
+          <button className="px-3 py-1 bg-gray-600 text-white rounded hover:opacity-95">
             {copied ? "Copied!" : "Copy"}
           </button>
         </CopyToClipboard>
       </div>
-      <div className="p-4 bg-gray-700">
+      <div className="p-4 bg-gray-900">
         {isPreview ? (
-          <div>{preview}</div>
+          <div className="h-[350px] flex items-center justify-center w-full">
+            {preview}
+          </div>
         ) : (
           <SyntaxHighlighter language="javascript" style={dark}>
             {code}
