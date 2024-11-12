@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import CodeViewer from "@/components/ui/CodeViewer";
+import CodeViewer from "@/components/shared/CodeViewer";
 import { Button } from "./button";
 
 const codePrimary = `

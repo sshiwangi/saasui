@@ -21,14 +21,14 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 dark:bg-white ">
+    <Disclosure as="nav" className="bg-neutrals-light dark:bg-primary-dark">
       {({ open }) => (
         <>
-          <div className="mx-auto  px-2 sm:px-6 ">
+          <div className="mx-auto px-2 sm:px-6">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
-                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 dark:text-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                {/* Mobile menu button */}
+                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-primary-dark dark:text-neutrals-light hover:bg-primary-light hover:text-secondary-dark focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-dark">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -40,16 +40,9 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  {/* <Image
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                    width={120}
-                    height={20}
-                  /> */}
                   <a
                     href="/"
-                    className="text-gray-300 dark:text-gray-800 text-xl font-bold"
+                    className="text-primary-dark dark:text-neutrals-light text-xl font-bold"
                   >
                     Saaas UI
                   </a>
@@ -63,8 +56,8 @@ export default function Navbar() {
                         className={`
                           ${
                             item.current
-                              ? "bg-gray-900 text-white dark:text-gray-800"
-                              : "dark:text-gray-800 text-gray-300 hover:bg-gray-700 hover:rounded-lg hover:text-white "
+                              ? "bg-primary-light text-secondary-dark"
+                              : "text-primary-dark dark:text-neutrals-light hover:bg-primary-light hover:rounded-lg hover:text-secondary-dark"
                           },
                           " px-3 py-2 text-sm font-medium"
                         `}
@@ -92,11 +85,11 @@ export default function Navbar() {
                   className={`
                     ${
                       item.current
-                        ? "bg-gray-900 text-white dark:text-gray-800"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white  dark:text-gray-800"
+                        ? "bg-primary-light text-secondary-dark"
+                        : "text-primary-dark hover:bg-primary-light hover:text-secondary-dark dark:text-neutrals-light"
                     }
                     block rounded-md px-3 py-2 text-base font-medium
-                  )`}
+                  `}
                   aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
