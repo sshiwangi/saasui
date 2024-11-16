@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Sparkles from "./Sparkles";
 
-const ContactSection = () => {
+const ContactSection1 = () => {
   return (
     <div className="relative min-h-screen bg-[#101213] flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
       {/* Animated Sparkles */}
@@ -135,5 +135,4 @@ const ContactSection = () => {
   );
 };
 
-
-export default ContactSection;
+export default ContactSection1;

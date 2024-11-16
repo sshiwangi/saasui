@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import CodePreview from "@/components/shared/CodeViewer1";
-import CommandPalette from "./Search";
+import Search from "./Search";
 
 const CommandPaletteExample = () => {
   const [source, setSource] = useState("");
@@ -35,7 +35,7 @@ const CommandPaletteExample = () => {
 
   return (
     <div className="space-y-8 h-full">
-        <CodePreview component={CommandPalette} code={source} />
+        <CodePreview component={Search} code={source} />
       </div>
   );
 };
