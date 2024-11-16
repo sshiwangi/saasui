@@ -12,9 +12,9 @@ function Sidebar() {
     // "--radix-scroll-area-corner-height": "0px",
   };
   return (
-    <aside className="fixed border-r text-white border-gray-500 top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] px-8 py-4 shrink-0 lg:sticky lg:block lg:self-start">
+    <aside className="fixed border-r text-white border-[#272B2B] z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] px-8 py-4 shrink-0 lg:sticky lg:block lg:self-start">
       <div
-        className="relative overflow-hidden bg-gray-800 h-full py-6 pr-6 lg:py-8"
+        className="relative overflow-hidden bg-primary-dark h-full py-6 pr-6 lg:py-8"
         // style={customStyle}
       >
         <div
@@ -46,15 +46,15 @@ function Sidebar() {
                 <div className="grid grid-flow-row auto-rows-max text-sm">
                   <a
                     className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/buttons"
+                    href="/allcomponents/table"
                   >
-                    Buttons
+                    Tables
                   </a>
                   <a
                     className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/cards"
+                    href="/allcomponents/coloreditor"
                   >
-                    Cards
+                    ColorEditor
                   </a>
                   <a
                     className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
@@ -64,9 +64,15 @@ function Sidebar() {
                   </a>
                   <a
                     className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/navbars"
+                    href="/allcomponents/bargraph"
                   >
-                    Navbars
+                    BarGraph
+                  </a>
+                  <a
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    href="/allcomponents/piechart"
+                  >
+                    PieChart
                   </a>
                 </div>
               </div>

@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
 
             {/* Main Nav */}
             <nav className="hidden md:flex items-center gap-6">
-              <NavItem href="/components">Components</NavItem>
+              <NavItem href="/allcomponents">Components</NavItem>
               <NavItem href="/examples">Examples</NavItem>
             </nav>
           </div>

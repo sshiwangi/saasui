@@ -1,6 +1,6 @@
 import React from "react";
 
-function AllComponents() {
+const AllComponents: React.FC = () => {
   return <div>All components</div>;
 }
 
