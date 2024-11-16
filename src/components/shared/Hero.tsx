@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import LayoutEffect from "../wrappers/LayoutEffect";
-import Image from "next/image";
+// import LayoutEffect from "../wrappers/LayoutEffect";
+// import Image from "next/image";
 
 function Hero() {
   return (

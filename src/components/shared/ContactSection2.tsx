@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const ContactForm = () => {
+const ContactSection = () => {
   return (
     <div className="relative min-h-screen bg-[#101213] flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
       {/* Headers */}
@@ -92,4 +92,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactSection;

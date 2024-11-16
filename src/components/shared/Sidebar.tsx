@@ -58,9 +58,9 @@ function Sidebar() {
                   </a>
                   <a
                     className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/accordians"
+                    href="/allcomponents/calendar"
                   >
-                    Accordians
+                    Calendar
                   </a>
                   <a
                     className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
@@ -73,6 +73,54 @@ function Sidebar() {
                     href="/allcomponents/piechart"
                   >
                     PieChart
+                  </a>
+                  <a
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    href="/allcomponents/timepicker"
+                  >
+                    Time Picker
+                  </a>
+                  <a
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    href="/allcomponents/dashboardthemepicker"
+                  >
+                    Dashboard Theme Picker
+                  </a>
+                  <a
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    href="/allcomponents/search"
+                  >
+                    Search
+                  </a>
+                  <a
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    href="/allcomponents/chart"
+                  >
+                    Chart
+                  </a>
+                  <a
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    href="/allcomponents/activitytracker"
+                  >
+                    Activity Tracker
+                  </a>
+                  <a
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    href="/allcomponents/tabs"
+                  >
+                    Tabs
+                  </a>
+                  <a
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    href="/allcomponents/impressions"
+                  >
+                    Impressions Maps
+                  </a>
+                  <a
+                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                    href="/allcomponents/stats"
+                  >
+                    Stats
                   </a>
                 </div>
               </div>

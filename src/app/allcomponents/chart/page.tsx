@@ -2,16 +2,16 @@
 
 import { useState, useEffect } from "react";
 import CodePreview from "@/components/shared/CodeViewer1";
-import SegmentedTabs from "./Tabs";
+import TransactionChart from "./Chart";
 
-export default function SegmentedTabsExample() {
+export default function TransactionChartExample() {
   const [source, setSource] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch(
       `/api/source?path=${encodeURIComponent(
-        "src/app/allcomponents/tabs/Tabs.tsx"
+        "src/app/allcomponents/chart/Chart.tsx"
       )}`
     )
       .then((res) => res.json())
@@ -35,7 +35,7 @@ export default function SegmentedTabsExample() {
 
   return (
     <div className="space-y-8 h-full">
-      <CodePreview component={SegmentedTabs} code={source} />
+      <CodePreview component={TransactionChart} code={source} />
     </div>
   );
 }
