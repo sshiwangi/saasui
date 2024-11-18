@@ -5,7 +5,11 @@ interface CustomCSSProperties extends CSSProperties {
   "--radix-scroll-area-corner-height"?: string;
 }
 
-function Sidebar() {
+interface SidebarProps {
+  routes: { href: string; name: string }[];
+}
+
+function Sidebar({ routes }: SidebarProps) {
   const customStyle: CustomCSSProperties = {
     position: "relative",
     // "--radix-scroll-area-corner-width": "0px",
@@ -35,8 +39,6 @@ function Sidebar() {
                   >
                     Install Tailwind Css
                   </a>
-                  {/* <a href="#"></a>
-                  <a href="#"></a> */}
                 </div>
               </div>
               <div className="pb-4">
@@ -44,84 +46,15 @@ function Sidebar() {
                   All Components
                 </h4>
                 <div className="grid grid-flow-row auto-rows-max text-sm">
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/table"
-                  >
-                    Tables
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/coloreditor"
-                  >
-                    ColorEditor
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/calendar"
-                  >
-                    Calendar
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/bargraph"
-                  >
-                    BarGraph
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/piechart"
-                  >
-                    PieChart
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/timepicker"
-                  >
-                    Time Picker
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/dashboardthemepicker"
-                  >
-                    Dashboard Theme Picker
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/search"
-                  >
-                    Search
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/chart"
-                  >
-                    Chart
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/activitytracker"
-                  >
-                    Activity Tracker
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/tabs"
-                  >
-                    Tabs
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/impressions"
-                  >
-                    Impressions Maps
-                  </a>
-                  <a
-                    className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
-                    href="/allcomponents/stats"
-                  >
-                    Stats
-                  </a>
+                  {routes.map(route => (
+                    <a
+                      key={route.name}
+                      className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
+                      href={route.href}
+                    >
+                      {route.name}
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>

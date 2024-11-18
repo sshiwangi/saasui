@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import Navbar from "../components/shared/Navbar1";
 import Hero from "@/components/shared/Hero1";
 import Features from "@/components/shared/Features2";
