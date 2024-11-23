@@ -1,4 +1,4 @@
-import Navbar from "@/components/shared/Navbar1";
+import Navbar from "@/components/shared/Navbar";
 import Sidebar from "@/components/shared/Sidebar";
 
 const routes = [
