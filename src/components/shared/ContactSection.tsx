@@ -46,7 +46,7 @@ const ContactSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className="relative bg-gradient-to-b from-[#1C2021]/90 to-[#1C2021]/70 rounded-2xl backdrop-blur-md p-8"
           style={{
-            boxShadow: "0 0 40px rgba(56, 182, 255, 0.1)",
+            boxShadow: "0 0 40px rgba(56, 56, 57, 0.1)",
           }}
         >
           <form className="space-y-6">

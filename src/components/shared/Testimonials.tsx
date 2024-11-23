@@ -37,28 +37,33 @@ const reviews = [
 const testimonials: TestimonialType[] = [
   {
     id: 1,
-    avatar: "/api/placeholder/48/48",
+    avatar:
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     position: "top-24 left-[25%]",
   },
   {
     id: 2,
-    avatar: "/api/placeholder/48/48",
+    avatar:
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     position: "top-12 left-[50%] -translate-x-1/2",
   },
   {
     id: 3,
-    avatar: "/api/placeholder/48/48",
+    avatar:
+      "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     position: "top-24 right-[25%]",
   },
   {
     id: 4,
-    avatar: "/api/placeholder/48/48",
+    avatar:
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     comment: "Type-safe!",
     position: "bottom-64 left-[20%]",
   },
   {
     id: 5,
-    avatar: "/api/placeholder/48/48",
+    avatar:
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     comment: "Great DX",
     position: "bottom-64 right-[20%]",
   },
@@ -75,7 +80,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <div className="bg-[#101213] relative min-h-screen pt-20 overflow-hidden">
+    <div className="bg-[#101213] relative min-h-screen pt-24 overflow-hidden">
       <div className="flex justify-center mb-6">
         <span className="bg-[#1C2021] text-[#41BB91] px-4 py-1.5 rounded-full text-sm">
           Testimonials
@@ -88,7 +93,7 @@ const TestimonialsSection = () => {
         customers have to say
       </h2>
 
-      <div className="max-w-[1200px] mx-auto relative h-[700px]">
+      <div className="max-w-[1200px] mx-auto relative h-[600px]">
         {/* Perfect Semicircle Arcs with Gradient Fade */}
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 600">
           <defs>
@@ -130,49 +135,49 @@ const TestimonialsSection = () => {
             {/* Top row - positioned higher */}
             <div className="absolute top-10 left-1/4 transform -translate-x-1/2">
               <img
-                src="/api/placeholder/48/48"
+                src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt=""
                 className="w-12 h-12 rounded-full border-2 border-[#1C2021]"
               />
             </div>
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
               <img
-                src="/api/placeholder/48/48"
+                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt=""
                 className="w-12 h-12 rounded-full border-2 border-[#1C2021]"
               />
             </div>
             <div className="absolute top-10 right-1/4 transform translate-x-1/2">
               <img
-                src="/api/placeholder/48/48"
+                src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt=""
                 className="w-12 h-12 rounded-full border-2 border-[#1C2021]"
               />
             </div>
 
             {/* Bottom row - chat bubbles */}
-            <div className="absolute bottom-64 left-[20%]">
-              <div className="relative">
+            <div className="absolute bottom-20 left-[20%]">
+              <div className="relative flex gap-2 items-center">
                 <img
-                  src="/api/placeholder/48/48"
+                  src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt=""
                   className="w-12 h-12 rounded-full border-2 border-[#1C2021]"
                 />
-                <div className="absolute -top-10 left-14">
+                <div className="">
                   <span className="bg-[#41BB91]/10 text-[#41BB91] px-4 py-1.5 rounded-full text-sm">
                     Cool !
                   </span>
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-64 right-[20%]">
-              <div className="relative">
+            <div className="absolute bottom-64 right-[5%]">
+              <div className="relative flex items-center gap-2">
                 <img
-                  src="/api/placeholder/48/48"
+                  src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt=""
                   className="w-12 h-12 rounded-full border-2 border-[#1C2021]"
                 />
-                <div className="absolute -top-10 left-14">
+                <div className="">
                   <span className="bg-[#41BB91]/10 text-[#41BB91] px-4 py-1.5 rounded-full text-sm">
                     Very good service
                   </span>
@@ -215,7 +220,7 @@ const TestimonialsSection = () => {
                     </p>
                     <div className="flex items-center gap-4">
                       <img
-                        src="/api/placeholder/48/48"
+                        src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                         alt={reviews[currentIndex].author}
                         className="w-12 h-12 rounded-full"
                       />

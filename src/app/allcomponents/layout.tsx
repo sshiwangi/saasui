@@ -8,7 +8,10 @@ const routes = [
   { href: "/allcomponents/bargraph", name: "BarGraph" },
   { href: "/allcomponents/piechart", name: "PieChart" },
   { href: "/allcomponents/timepicker", name: "Time Picker" },
-  { href: "/allcomponents/dashboardthemepicker", name: "Dashboard Theme Picker" },
+  {
+    href: "/allcomponents/dashboardthemepicker",
+    name: "Dashboard Theme Picker",
+  },
   { href: "/allcomponents/search", name: "Search" },
   { href: "/allcomponents/chart", name: "Chart" },
   { href: "/allcomponents/activitytracker", name: "Activity Tracker" },
@@ -19,6 +22,8 @@ const routes = [
   { href: "/allcomponents/card", name: "Card" },
   { href: "/allcomponents/popover", name: "Popover" },
   { href: "/allcomponents/avatar", name: "Avatar" },
+  { href: "/allcomponents/voicecommand", name: "Voice Command" },
+  { href: "/allcomponents/messageinput", name: "Message Input" },
 ];
 
 export default function DashboardLayout({

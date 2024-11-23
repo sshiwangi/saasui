@@ -1,104 +1,149 @@
-// "use client";
-// import { Fragment } from "react";
-// import {
-//   Disclosure,
-//   DisclosureButton,
-//   DisclosurePanel,
-//   Menu,
-//   MenuButton,
-//   MenuItem,
-//   MenuItems,
-//   Transition,
-// } from "@headlessui/react";
-// import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-// import Image from "next/image";
-// import ThemeSwitcher from "../wrappers/ThemeSwitcher";
 
-// const navigation = [
-//   { name: "Components", href: "/allcomponents/buttons", current: false },
-//   { name: "Templates", href: "#", current: false },
-// ];
+"use client";
 
-// export default function Navbar() {
-//   return (
-//     <Disclosure as="nav" className="bg-neutrals-light dark:bg-primary-dark">
-//       {({ open }) => (
-//         <>
-//           <div className="mx-auto px-2 sm:px-6">
-//             <div className="relative flex h-16 items-center justify-between">
-//               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-//                 {/* Mobile menu button */}
-//                 <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-primary-dark dark:text-neutrals-light hover:bg-primary-light hover:text-secondary-dark focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary-dark">
-//                   <span className="absolute -inset-0.5" />
-//                   <span className="sr-only">Open main menu</span>
-//                   {open ? (
-//                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-//                   ) : (
-//                     <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-//                   )}
-//                 </DisclosureButton>
-//               </div>
-//               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-//                 <div className="flex flex-shrink-0 items-center">
-//                   <a
-//                     href="/"
-//                     className="text-primary-dark dark:text-neutrals-light text-xl font-bold"
-//                   >
-//                     Saaas UI
-//                   </a>
-//                 </div>
-//                 <div className="hidden sm:ml-6 sm:block">
-//                   <div className="flex space-x-4">
-//                     {navigation.map((item) => (
-//                       <a
-//                         key={item.name}
-//                         href={item.href}
-//                         className={`
-//                           ${
-//                             item.current
-//                               ? "bg-primary-light text-secondary-dark"
-//                               : "text-primary-dark dark:text-neutrals-light hover:bg-primary-light hover:rounded-lg hover:text-secondary-dark"
-//                           },
-//                           " px-3 py-2 text-sm font-medium"
-//                         `}
-//                         aria-current={item.current ? "page" : undefined}
-//                       >
-//                         {item.name}
-//                       </a>
-//                     ))}
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-//                 <ThemeSwitcher />
-//               </div>
-//             </div>
-//           </div>
+import React from "react";
+import { Search, Github, Moon, Sun } from "lucide-react";
+import Link from "next/link";
+import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
-//           <DisclosurePanel className="sm:hidden">
-//             <div className="space-y-1 px-2 pb-3 pt-2">
-//               {navigation.map((item) => (
-//                 <DisclosureButton
-//                   key={item.name}
-//                   as="a"
-//                   href={item.href}
-//                   className={`
-//                     ${
-//                       item.current
-//                         ? "bg-primary-light text-secondary-dark"
-//                         : "text-primary-dark hover:bg-primary-light hover:text-secondary-dark dark:text-neutrals-light"
-//                     }
-//                     block rounded-md px-3 py-2 text-base font-medium
-//                   `}
-//                   aria-current={item.current ? "page" : undefined}
-//                 >
-//                   {item.name}
-//                 </DisclosureButton>
-//               ))}
-//             </div>
-//           </DisclosurePanel>
-//         </>
-//       )}
-//     </Disclosure>
-//   );
-// }
+interface NavItemProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+const NavItem: React.FC<NavItemProps> = ({ href, children }) => (
+  <Link 
+    href={href} 
+    className="text-sm text-gray-400 hover:text-[#F6F3EB] transition-colors"
+  >
+    {children}
+  </Link>
+);
+
+interface IconButtonProps {
+  onClick?: () => void;
+  children: React.ReactNode;
+}
+
+const IconButton: React.FC<IconButtonProps> = ({ onClick, children }) => (
+  <Button 
+    variant="ghost" 
+    size="icon"
+    onClick={onClick}
+    className="text-gray-400 hover:text-[#F6F3EB] hover:bg-[#1C2021]"
+  >
+    {children}
+  </Button>
+);
+
+const ThemeSwitcher: React.FC = () => {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  // Avoid hydration mismatch
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button 
+          variant="ghost" 
+          size="icon"
+          className="text-gray-400 hover:text-[#F6F3EB] hover:bg-[#1C2021]"
+        >
+          {theme === 'dark' ? (
+            <Moon className="h-5 w-5" />
+          ) : (
+            <Sun className="h-5 w-5" />
+          )}
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="bg-[#1C2021] border-[#272B2B]">
+        <DropdownMenuItem 
+          onClick={() => setTheme("light")}
+          className="text-gray-400 hover:text-[#F6F3EB] hover:bg-[#272B2B] cursor-pointer"
+        >
+          Light
+        </DropdownMenuItem>
+        <DropdownMenuItem 
+          onClick={() => setTheme("dark")}
+          className="text-gray-400 hover:text-[#F6F3EB] hover:bg-[#272B2B] cursor-pointer"
+        >
+          Dark
+        </DropdownMenuItem>
+        <DropdownMenuItem 
+          onClick={() => setTheme("system")}
+          className="text-gray-400 hover:text-[#F6F3EB] hover:bg-[#272B2B] cursor-pointer"
+        >
+          System
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
+
+const Navbar: React.FC = () => {
+  const handleSearch = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    // Search logic here
+  }, []);
+
+  return (
+    <header className="border-b border-[#272B2B] bg-[#101213] dark:bg-[#101213] light:bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="h-16 flex items-center justify-between px-4">
+          {/* Logo */}
+          <div className="flex items-center gap-6">
+            <Link href="/" className="flex items-center gap-2">
+              <div className="font-bold text-xl flex items-center">
+                <span className="text-[#41BB91]">Saas</span>
+                <span className="text-[#F6F3EB] dark:text-[#F6F3EB] light:text-[#101213]">UI</span>
+              </div>
+            </Link>
+
+            {/* Main Nav */}
+            <nav className="hidden md:flex items-center gap-6">
+              <NavItem href="/allcomponents">Components</NavItem>
+              <NavItem href="/examples">Examples</NavItem>
+            </nav>
+          </div>
+
+          {/* Right Side */}
+          <div className="flex items-center gap-4">
+            {/* Search */}
+            <div className="hidden md:flex relative">
+              <Input
+                type="search"
+                placeholder="Search components..."
+                className="w-[200px] h-9 bg-[#1C2021] border-[#272B2B] text-[#F6F3EB] placeholder:text-gray-500 focus:ring-[#41BB91]"
+                onChange={handleSearch}
+              />
+              <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
+            </div>
+
+            {/* GitHub */}
+            <IconButton onClick={() => window.open('https://github.com', '_blank')}>
+              <Github className="w-5 h-5" />
+            </IconButton>
+
+            {/* Theme Toggle */}
+            <ThemeSwitcher />
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;
