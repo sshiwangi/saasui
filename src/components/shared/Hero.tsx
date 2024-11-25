@@ -5,6 +5,7 @@ import { Github, MoveRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import HoverReveal from "../ui/reveal-effect";
+import Link from "next/link";
 
 const Hero: React.FC = () => {
   return (
@@ -36,18 +37,20 @@ const Hero: React.FC = () => {
             Beautiful, ready-to-ship UI components that make your product stand
             out. No design skills needed - just copy, customize, and launch.
           </p>
-
           <div className="flex items-center justify-center gap-4 pt-4">
-            <Button className="bg-secondary-light text-black hover:bg-secondary-dark  px-8">
+            <Link
+              href="/allcomponents"
+              className="bg-secondary-light text-black hover:bg-secondary-dark  px-8 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium  transition-colors h-10 py-2 "
+            >
               Browse Components
-            </Button>
-            <Button
-              variant="outline"
-              className="bg-[#1C2021] border-[#272B2B] text-white gap-2"
+            </Link>
+            <Link
+              href={"/examples"}
+              className="bg-[#1C2021] border-[#272B2B] text-white gap-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors border hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
             >
               View Examples
               <MoveRight className="w-4 h-4" />
-            </Button>
+            </Link>
           </div>
         </div>
 

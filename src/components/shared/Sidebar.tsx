@@ -18,14 +18,10 @@ function Sidebar({ routes }: SidebarProps) {
   return (
     <aside className="fixed border-r text-white border-[#272B2B] z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] px-8 py-4 shrink-0 lg:sticky lg:block lg:self-start">
       <div
-        className="relative overflow-hidden bg-primary-dark h-full py-6 pr-6 lg:py-8"
+        className="relative  overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent bg-primary-dark h-full py-6 pr-6 lg:py-8"
         // style={customStyle}
       >
-        <div
-          // data-radix-scroll-area-viewport=""
-          className="h-full w-full rounded-[inherit]"
-          // style={{ overflow: "hidden scroll" }}
-        >
+        
           <div style={{ minWidth: "100%", display: "table" }}>
             <div className="w-full">
               <div className="pb-4">
@@ -46,7 +42,7 @@ function Sidebar({ routes }: SidebarProps) {
                   All Components
                 </h4>
                 <div className="grid grid-flow-row auto-rows-max text-sm">
-                  {routes.map(route => (
+                  {routes.map((route) => (
                     <a
                       key={route.name}
                       className="group flex w-full items-center rounded-md border text-gray-300 border-transparent px-2 py-1 hover:text-blue-500 hover:translate-x-1 transition duration-200 __className_b15a0a text-muted-foreground"
@@ -60,7 +56,6 @@ function Sidebar({ routes }: SidebarProps) {
             </div>
           </div>
         </div>
-      </div>
     </aside>
   );
 }
