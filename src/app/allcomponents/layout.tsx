@@ -1,3 +1,4 @@
+"use client"
 import Navbar from "@/components/shared/Navbar";
 import Sidebar from "@/components/shared/Sidebar";
 
@@ -24,6 +25,7 @@ const routes = [
   { href: "/allcomponents/avatar", name: "Avatar" },
   { href: "/allcomponents/voicecommand", name: "Voice Command" },
   { href: "/allcomponents/messageinput", name: "Message Input" },
+  { href: "/allcomponents/profilecard", name: "Profile Card" },
 ];
 
 export default function DashboardLayout({
